@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app.js" defer></script>
+    <title>QR Generator</title>
+</head>
+<body>
+    <div class="center p-5 flex flex-col w-[300px] justify-center items-center mt-20">
+        <h1 class="heading font-bold mb-10 text-2xl">QR Code Generator</h1>
+        <div class="input w-full flex flex-col">
+            <input class="input-url border mb-6 py-1 rounded-lg" type="text">
+            <button class="generate py-1 mb-6  font-bold text-white bg-red-500 rounded-lg">Generate</button>
+        </div>
+        <div id="code">
+
+        </div>
+        <button class="download hidden py-1 my-6 w-full  font-bold text-white bg-red-500 rounded-lg">Download</button>
+    </div>
+    
+</body>
+</html>
