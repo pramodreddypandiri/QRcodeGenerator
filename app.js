@@ -3,6 +3,8 @@ const generateBtn = document.querySelector(".generate");
 
 const code = document.getElementById("code");
 const download = document.querySelector(".download");
+
+//function for code generation
 const generateQrCode = (e) => {
     e.preventDefault();
     clearUI();
@@ -22,15 +24,19 @@ const generateQrCode = (e) => {
         download.classList.remove("hidden");
     }
 }
+
+//function for downloading qr code image
 function downloadCode(){
-    download.setAttribute(download,"code");
-    
+    download.setAttribute('href',code.querySelector('img').src);
+    //code.querySelector('img').src;
+
 }
 //event listener
 generateBtn.addEventListener('click',generateQrCode);
 download.addEventListener('click',() => {
     downloadCode();
 })
+//function for clearing previous qr image
 function clearUI(){
     code.innerHTML = "";
 }
